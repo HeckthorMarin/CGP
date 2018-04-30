@@ -15,6 +15,56 @@ ActiveRecord::Schema.define(version: 20180430045029) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "accounts", force: :cascade do |t|
+    t.string "title"
+    t.float "begBalance"
+    t.float "curBalance"
+    t.text "note"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.bigint "entity_id"
+    t.bigint "icon_id"
+    t.bigint "type_account_id"
+    t.bigint "badge_id"
+    t.index ["badge_id"], name: "index_accounts_on_badge_id"
+    t.index ["entity_id"], name: "index_accounts_on_entity_id"
+    t.index ["icon_id"], name: "index_accounts_on_icon_id"
+    t.index ["type_account_id"], name: "index_accounts_on_type_account_id"
+    t.index ["user_id"], name: "index_accounts_on_user_id"
+  end
+
+  create_table "badges", force: :cascade do |t|
+    t.string "name"
+    t.float "rel_value"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "entities", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "icons", force: :cascade do |t|
+    t.string "ref_icon"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "images", force: :cascade do |t|
+    t.string "ref_image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "type_accounts", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "username"
     t.string "lastname"
@@ -34,8 +84,17 @@ ActiveRecord::Schema.define(version: 20180430045029) do
     t.string "sa2"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "asksecurityone"
+    t.string "answersecurityone"
+    t.string "asksecuritytwo"
+    t.string "answersecuritytwo"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "accounts", "badges"
+  add_foreign_key "accounts", "entities"
+  add_foreign_key "accounts", "icons"
+  add_foreign_key "accounts", "type_accounts"
+  add_foreign_key "accounts", "users"
 end

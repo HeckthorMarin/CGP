@@ -1,0 +1,2 @@
+class TypeAccount < ApplicationRecord
+end

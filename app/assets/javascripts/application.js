@@ -12,4 +12,8 @@
 //
 //= require rails-ujs
 //= require turbolinks
+//= require jquery-3.3.1.slim.min
+//= require popper.min
+//= require tether
+//= require bootstrap.min
 //= require_tree .

@@ -32,6 +32,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', require: 'bcrypt'
 gem 'devise', git: 'https://github.com/plataformatec/devise.git'
 
+gem 'tether-rails'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

@@ -1,0 +1,82 @@
+.fondo{
+  background: linear-gradient(to right, #0b7fdb , white);
+}
+
+.titulo{
+  font-family: 'Dancing Script', cursive;
+  color:white;
+  font-style: italic;
+  font-size: 120px;
+}
+
+.titulo-sm{
+  font-family: 'Dancing Script', cursive;
+  color:white;
+  font-style: italic;
+  font-size: 80px;
+}
+
+.subtitulo{
+  font-family: 'Dancing Script', cursive;
+  color: white;
+  font-style: italic;
+  /*font-size: 20px;
+  margin-left: 20px;
+  margin-bottom: 50px;*/
+  
+}
+
+
+.btn-inicio{
+  background-color: transparent;
+  border: 1px solid white;
+  
+  color:white;
+  width: 180px;
+  height: 50px;
+  
+  margin-bottom: 30px;
+  /*margin-left: 100px;
+  margin-right: 10px;*/
+}
+.btn-inicio:hover{
+  border: 1px solid white;
+}
+
+
+.form_inicio_sesion button{
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+.form_inicio_sesion button:hover{
+  border: 1px solid white;
+}
+
+.form_inicio_sesion input{
+  border-radius: 5px;
+  box-shadow: 0px 0px 9px rgba(0,0,0,.35);
+}
+
+.form_inicio_sesion select{
+  border-radius: 5px;
+  box-shadow: 0px 0px 9px rgba(0,0,0,.35);
+}
+
+.links_inicio button{
+  color: #FFFFFF;
+  margin-top: 5px;
+  text-decoration: underline;
+  border: 0px solid white;
+}
+
+.links_inicio_inv button{
+  color: #006a68;
+  text-decoration: underline;
+}
+
+.links_inicio_inv button:hover{
+  color: #FFFFFF;
+  text-decoration: underline;
+}
