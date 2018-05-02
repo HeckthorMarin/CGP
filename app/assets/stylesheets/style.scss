@@ -1,5 +1,34 @@
+.columna{
+  /*background: #e8e8e8;*/
+  background: #e0e0e0;
+  border: 1px solid #424242;
+  height: 200px;
+  float: right;
+}
+/*.row{
+  background: blue;
+}*/
+
 .fondo{
   background: linear-gradient(to right, #0b7fdb , white);
+}
+
+.fondo-secun{
+  background: #e0e0e0;
+}
+
+.menu-responsive{
+  position: fixed;
+  background: #0b7fdb;
+  z-index: 1;
+}
+
+.columna-fija{
+  position: fixed;
+  overflow: hidden;
+  background: linear-gradient(to top, #0b7fdb , white);
+  height: 100%;
+
 }
 
 .titulo{
@@ -8,6 +37,7 @@
   font-style: italic;
   font-size: 120px;
 }
+
 
 .titulo-sm{
   font-family: 'Dancing Script', cursive;
@@ -65,7 +95,7 @@
 }
 
 .links_inicio button{
-  color: #FFFFFF;
+  color:white;
   margin-top: 5px;
   text-decoration: underline;
   border: 0px solid white;
@@ -77,6 +107,37 @@
 }
 
 .links_inicio_inv button:hover{
-  color: #FFFFFF;
+  color:white;
   text-decoration: underline;
+}
+
+.btn-menu{
+  background: transparent;
+  color:white;
+}
+
+.btn-menu:hover{
+  text-decoration: underline;
+}
+
+.circulo{
+  border: 1px dotted #757575;
+  border-radius: 50%;
+  height: 180px;
+  width: 180px;
+}
+
+/*Titulo de home, columna izquierda*/
+.titulo-home{
+  padding-top: 35px;
+  font-family: 'Dancing Script', cursive;
+  color: #757575;
+  font-style: italic;
+  font-size: 90px;
+}
+
+.patrim{
+  margin-top: 10px;
+  border: 1px dotted white;
+  border-radius: 10px;
 }

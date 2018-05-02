@@ -2,15 +2,10 @@
 <html lang="es">
 <html>
   <head>
-      <!-- Required meta tags -->
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximium-scale=1.0, minimium-scale=1.0, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <!-- <link rel="stylesheet" href="../css/bootstrap.min.css"> -->
-
-    <!--  Estilos en CSS -->
-    <!-- <link rel="stylesheet" href="../css/estilos.css"> -->
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
 
@@ -22,9 +17,15 @@
 
   </head>
 
-  <body class="fondo">
-  	<p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= yield %>
-  </body>
+  <% if user_signed_in? %>
+    <body class="fondo-secun">
+      <%= yield %>
+    </body>
+  <% else %>
+    <body class="fondo">
+    	<p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+      <%= yield %>
+    </body>
+  <% end %>
 </html>
