@@ -7,7 +7,7 @@
 		
 		<!--Solo aparece en un tamaño mayor a 748px, de resto aparece al final de la pagina-->
 		<div class="col-auto d-none d-md-block links_inicio_inv">
-			<button onclick="location.href='iniciar-sesion.html'" type="button" class="btn btn-link text-left"><strong><- Volver a inicio de sesión</strong></button>
+			<button type="button" class="btn btn-link text-left"><strong><%= link_to "<- Volver a inicio de sesión", root_path%></strong></button>
 		</div>
 		
 
@@ -77,7 +77,7 @@
 	<!--Solo aparece cuando mide menos de 768px-->
 	<div class="row">
 		<div class="col-auto d-md-none links_inicio">
-			<button type="button" class="btn btn-link text-left"><- Volver a inicio de sesión</button>
+			<button type="button" class="btn btn-link text-left"><%= link_to "<- Volver al inicio de sesión", root_path%></button>
 		</div>
 	</div>
 </div>

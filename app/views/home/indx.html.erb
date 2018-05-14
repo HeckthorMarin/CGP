@@ -10,7 +10,7 @@
 					<a href="#" class="dropdown-item">Presupuesto</a>
 					<a href="#" class="dropdown-item">Tarjetas de crédito</a>
 					<a href="#" class="dropdown-item">Configuración</a>
-					<a href="#" class="dropdown-item">Cerrar sesión</a>
+					<a class="dropdown-item"><%= link_to "Cerrar sesión", destroy_user_session_path, method: :delete %></a>
 				</div>
 			</div>
 		</div>
