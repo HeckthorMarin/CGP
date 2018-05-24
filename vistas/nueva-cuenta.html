@@ -8,7 +8,11 @@
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="../css/bootstrap.min.css">
 
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
 	<!--  Estilos en CSS -->
+	<link rel="stylesheet" href="../css/fontawesome.min.css">
+	<link rel="stylesheet" href="../css/fontawesome-all.css">
 	<link rel="stylesheet" href="../css/estilos.css">
 	<link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
@@ -62,41 +66,76 @@
 			</div>
 			<div class="col-12 col-md-9 offset-md-3 mt-5">
 				<div class="col-12">
-					<p class="h2 text-center text-md-left mt-3 mt-md-0 ml-md-5"><strong>CUENTAS FINANCIERAS</strong></p>
+					<p class="h2 text-center text-md-left mt-3 mt-md-0 ml-md-5"><strong>NUEVA CUENTA FINANCIERA</strong></p>
 				</div>
 
-				<div class="col-12 pl-0 pl-md-2 pr-0 pt-5">
-					<table class="table table-striped table-hover table-bordered">
-						<thead class="">
-							<th>ICONO</th>
-							<th>NOMBRE</th>
-							<th>SALDO</th>
-							<th>OPCIONES</th>
-						</thead>
-<!--__________________________________Este es el que se debe repetir para cada cuenta__________________________________-->
-						<tr> 
-							<td>img</td>
-							<td>banco1</td>
-							<td>$100</td>
-							<td>
-								<div class="dropdown">
-									<button style="color: black" class="btn btn-menu dropdown-toggle" id="dp-menu" data-toggle="dropdown" ></button>
-									<div class="dropdown-menu" aria-labelledby="dp-menu">
-										<a href="#" class="dropdown-item">Ver</a>
-										<a href="#" class="dropdown-item">Editar</a>
-										<a href="#" class="dropdown-item">Transacciones</a>
-										<a href="#" class="dropdown-item">Eliminar</a>
-									</div>
+				<form action="" class="form_inicio_sesion mt-5">
+							<div class="form-group row">
+								<div class="col-12 col-sm-6 mb-3 mb-sm-0">
+									<input class="form-control" type="text" id="" placeholder="Título *">
 								</div>
-							</td>
-						</tr>
 
-<!--____________________________________________________________________________________________________________________-->
-					</table>
-					<button onclick="location.href='nueva-cuenta.html'" type="button" class="btn" style="background: transparent;">
-						<img class="img-fluid" src="../img/new.png" alt="cargando..." width="35" height="35">
-					</button>
-				</div>
+								<div class="col-12 col-sm-6">
+									<select name="" id="" class="form-control"> <!--Arreglar iconos-->
+										<option value="" disabled selected hidden>Icono</option>
+										<option value="1"><span class="fas fa-user"></span></option>
+										<option value="2"></option>
+									</select>
+								</div>
+							</div>
+
+							<div class="form-group row">
+								<div class="col-12 col-sm-6">
+									<input class="form-control" type="number" id="" placeholder="Saldo inicial *">
+								</div>
+								<div class="col-12 col-sm-6">
+									<select name="" id="" class="form-control">
+										<option value="" disabled selected hidden>Divisa *</option>
+										<option value="1">USD</option>
+										<option value="2">EUR</option>
+										<option value="3">COP</option>
+										<option value="4">GBP</option>
+									</select>
+								</div>
+							</div>
+							
+							<div class="form-group row">
+								<div class="col-12">
+									<h6></h6>
+								</div>
+								<div class="col-12 col-sm-6 mb-3 mb-sm-0">
+									<select name="" id="" class="form-control">
+										<option value="" disabled selected hidden>Tipo de cuenta *</option>
+										<option value="1">Corriente</option>
+										<option value="2">Billetera</option>
+										<option value="3">Ahorro</option>
+									</select>
+								</div>
+
+								<div class="col-12 col-sm-6">
+									<input class="form-control" type="text" id="" placeholder="Entidad ">
+								</div>
+
+							</div>
+
+							<div class="form-group row">
+								<div class="col-12 col-sm-6 mb-3 mb-sm-0">
+									<textarea class="form-control descripcion" name="" id="" placeholder="Añade una nota"></textarea>
+								</div>
+
+							</div>
+							
+							<div class="row justify-content-between">
+								<div class="col-12 col-sm-4 col-md text-left">
+									<button style="color: #0b7fdb; border-color: #0b7fdb" type="submit" class="btn btn-primary" name="">Aceptar</button>
+									<button onclick="location.href='administrar-cuentas.html'" style="color: #0b7fdb; border-color: #0b7fdb" type="button" class="btn btn-primary" name="" >Cancelar</button>
+								</div>
+								
+								
+							</div>
+							
+						</form>
+
 
 
 			</div>
