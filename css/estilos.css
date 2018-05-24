@@ -1,13 +1,16 @@
+/*PRUEBA*/
 .columna{
 	/*background: #e8e8e8;*/
-	background: #e0e0e0;
+	background: red;
 	border: 1px solid #424242;
-	height: 200px;
-	float: right;
+	/*height: 200px;
+	float: right;*/
 }
 /*.row{
 	background: blue;
 }*/
+
+/*ESTILOS*/
 
 .fondo{
 	background: linear-gradient(to right, #0b7fdb , white);
@@ -28,7 +31,6 @@
 	overflow: hidden;
 	background: linear-gradient(to top, #0b7fdb , white);
 	height: 100%;
-
 }
 
 .titulo{
