@@ -73,19 +73,24 @@
 							<div class="form-group row">
 								<div class="col-12 col-sm-6 mb-3 mb-sm-0">
 									<label for="titulo">Título</label>
-									<input class="form-control" type="text" id="titulo" placeholder="Cuenta x" readonly>
+									<input class="form-control" type="text" id="titulo" placeholder="Cuenta x">
 								</div>
 
 								<div class="col-12 col-sm-6">
 									<label for="tipo">Tipo de cuenta</label>
-									<input class="form-control" type="text" id="tipo" placeholder="Ahorros" readonly>
+									<input class="form-control" type="text" id="tipo" placeholder="Ahorros">
 								</div>
 							</div>
 
+							<!--*********************************Arreglar icono**************************-->
 							<div class="form-group row">
 								<div class="col-12 col-sm-6 mb-3 mb-sm-0">
 									<label for="icono">Icono</label>
-									<input class="form-control" type="text" id="icono" placeholder="icono" readonly>
+									<select name="" id="" class="form-control"> <!--Arreglar iconos-->
+										<option value="" disabled selected hidden>Icono</option>
+										<option value="1"><span class="fas fa-user"></span></option>
+										<option value="2"></option>
+									</select>
 								</div>
 								<div class="col-12 col-sm-6">
 									<label for="gastos">Total de gastos</label>
@@ -96,7 +101,7 @@
 							<div class="form-group row">
 								<div class="col-12 col-sm-6 mb-3 mb-sm-0">
 									<label for="entidad">Entidad</label>
-									<input class="form-control" type="text" id="entidad" placeholder="BBVA" readonly>
+									<input class="form-control" type="text" id="entidad" placeholder="BBVA">
 								</div>
 
 								<div class="col-12 col-sm-6">
@@ -108,7 +113,7 @@
 							<div class="form-group row">
 								<div class="col-12 col-sm-6 mb-3 mb-sm-0">
 									<label for="notas">Notas</label>
-									<textarea class="form-control descripcion" name="" id="notas" placeholder="Descripción" readonly></textarea>
+									<textarea class="form-control descripcion" name="" id="notas" placeholder="Descripción"></textarea>
 								</div>
 								<div class="col-12 col-sm-6">
 									<label for="transf">Total de transferencias</label>
@@ -129,10 +134,9 @@
 							</div>
 							
 							<div class="row justify-content-between">
-								<!--************************No se dirige a editar cuenta*******************************-->
-								<div class="col-12 col-sm-4 col-md text-left"> 
-									<button onclick="location.href='editar-cuenta.html'" style="color: #0b7fdb; border-color: #0b7fdb" type="submit" class="btn btn-primary" name="">Editar</button>
-									<button onclick="location.href='administrar-cuentas.html'" style="color: #0b7fdb; border-color: #0b7fdb" type="button" class="btn btn-primary" name="" >Volver</button>
+								<div class="col-12 col-sm-4 col-md text-left">
+									<button style="color: #0b7fdb; border-color: #0b7fdb" type="submit" class="btn btn-primary" name="">Confirmar</button>
+									<button onclick="location.href='administrar-cuentas.html'" style="color: #0b7fdb; border-color: #0b7fdb" type="button" class="btn btn-primary" name="" >Cancelar</button>
 								</div>
 								
 								
