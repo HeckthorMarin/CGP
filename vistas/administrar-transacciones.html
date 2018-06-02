@@ -14,7 +14,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
 	
 
-	<title>Cuentas</title>
+	<title>Transacciones</title>
 </head>
 <body class="fondo-secun">
 	<div class="container-fluid">
@@ -62,61 +62,26 @@
 			</div>
 			<div class="col-12 col-md-9 offset-md-3 mt-5">
 				<div class="col-12">
-					<p class="h2 text-center text-md-left mt-3 mt-md-0 ml-md-5"><strong>MOVIMIENTOS CUENTA FINANCIERA</strong></p>
+					<p class="h2 text-center text-md-left mt-3 mt-md-0 ml-md-5"><strong>TRANSACCIONES</strong></p>
 				</div>
-
-				<div class="col-12 form_inicio_sesion mt-5">
-					<div class="form-group row">
-						<div class="col-12 col-sm-6 mb-3 mb-sm-0">
-							<label for="titulo">Título de la cuenta</label>
-							<input class="form-control" type="text" id="titulo" placeholder="Cuenta x" readonly>
-						</div>
-
-						<div class="col-12 col-sm-6">
-							<label for="tipo">Tipo de cuenta</label>
-							<input class="form-control" type="text" id="tipo" placeholder="Ahorros" readonly>
-						</div>
-					</div>
-					
-					<div class="form-group row">
-						<div class="col-12 col-sm-6 mb-3 mb-sm-0">
-							<label for="entidad">Entidad</label>
-							<input class="form-control" type="text" id="entidad" placeholder="BBVA" readonly>
-						</div>
-
-						<div class="col-12 col-sm-6">
-							<label for="ingresos">Saldo inicial</label>
-							<input class="form-control" type="number" id="ingresos" placeholder="$1000" readonly>
-						</div>
-					</div>
-
-					<div class="form-group row">
-						<div class="col-12 col-sm-6">
-							<label for="ingresos"><strong>SALDO ACTUAL</strong></label>
-							<input class="form-control" type="number" id="ingresos" placeholder="$0" readonly>
-						</div>
-					</div>
-				</div>
-
-
 
 				<div class="col-12 pl-0 pl-md-2 pr-0 pt-5">
-					<h3>TRANSACCIONES</h3>
-					<hr>
 					<table class="table table-striped table-hover table-bordered">
 						<thead class="">
 							<th>NOMBRE</th>
 							<th>TIPO</th>
-							<th>FECHA</th>
 							<th>VALOR</th>
+							<th>CUENTA</th>
+							<th>FECHA</th>
 							<th>OPCIONES</th>
 						</thead>
-<!--__________________________________Este es el que se debe repetir para cada transaccion__________________________________-->
+<!--__________________________________Este es el que se debe repetir para cada TRANSACCION__________________________________-->
 						<tr> 
 							<td>transaccion 1</td>
-							<td>Gasto</td>
-							<td>15-mayo-2018</td>
+							<td>Gasto</td>							
 							<td>$1000</td>
+							<td>cuenta x</td>
+							<td>15-mayo-2018</td>
 							<td>
 								<div class="dropdown">
 									<button style="color: black" class="btn btn-menu dropdown-toggle" id="dp-menu" data-toggle="dropdown" ></button>
@@ -137,12 +102,13 @@
 							<img class="img-fluid" src="../img/new.png" alt="cargando..." width="35" height="35">
 						</button>
 						<div class="dropdown-menu" aria-labelledby="dp-new">
-							<a href="#" class="dropdown-item">Gasto</a>
-							<a href="#" class="dropdown-item">Ingreso</a>
-							<a href="#" class="dropdown-item">Transferencia</a>
+							<a href="gasto.html" class="dropdown-item">Gasto</a>
+							<a href="ingreso.html" class="dropdown-item">Ingreso</a>
+							<a href="transferencia.html" class="dropdown-item">Transferencia</a>
 						</div>
 
 					</div>
+					
 				</div>
 
 
