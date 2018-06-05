@@ -8,7 +8,11 @@
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="../css/bootstrap.min.css">
 
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
 	<!--  Estilos en CSS -->
+	<link rel="stylesheet" href="../css/fontawesome.min.css">
+	<link rel="stylesheet" href="../css/fontawesome-all.css">
 	<link rel="stylesheet" href="../css/estilos.css">
 	<link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
@@ -62,54 +66,80 @@
 			</div>
 			<div class="col-12 col-md-9 offset-md-3 mt-5">
 				<div class="col-12">
-					<p class="h2 text-center text-md-left mt-3 mt-md-0 ml-md-5"><strong>TRANSACCIONES</strong></p>
+					<p class="h2 text-center text-md-left mt-3 mt-md-0 ml-md-5"><strong>CUENTA FINANCIERA</strong></p>
 				</div>
 
-				<div class="col-12 pl-0 pl-md-2 pr-0 pt-5">
-					<table class="table table-striped table-hover table-bordered">
-						<thead class="">
-							<th>NOMBRE</th>
-							<th>TIPO</th>
-							<th>VALOR</th>
-							<th>CUENTA</th>
-							<th>FECHA</th>
-							<th>OPCIONES</th>
-						</thead>
-<!--__________________________________Este es el que se debe repetir para cada TRANSACCION__________________________________-->
-						<tr> 
-							<td>transaccion 1</td>
-							<td>Gasto</td>							
-							<td>$1000</td>
-							<td>cuenta x</td>
-							<td>15-mayo-2018</td>
-							<td>
-								<div class="dropdown">
-									<button style="color: black" class="btn btn-menu dropdown-toggle" id="dp-menu" data-toggle="dropdown" ></button>
-									<div class="dropdown-menu" aria-labelledby="dp-menu">
-										<a href="mover-transaccion.html" class="dropdown-item">Mover</a>
-										<!--
-										<a href="exportar-transaccion.html" class="dropdown-item">Exportar</a>-->
-										<a href="eliminar-transaccion.html" class="dropdown-item">Eliminar</a>
-									</div>
+				<form action="" class="form_inicio_sesion mt-5">
+							<div class="form-group row">
+								<div class="col-12 col-sm-6 mb-3 mb-sm-0">
+									<label for="titulo">Título</label>
+									<input class="form-control" type="text" id="titulo" placeholder="Cuenta x" readonly>
 								</div>
-							</td>
-						</tr>
 
-<!--____________________________________________________________________________________________________________________-->
-					</table>
-					<div class="dropdown">
-						<button class="btn" id="dp-new" data-toggle="dropdown">
-							<img class="img-fluid" src="../img/new.png" alt="cargando..." width="35" height="35">
-						</button>
-						<div class="dropdown-menu" aria-labelledby="dp-new">
-							<a href="gasto.html" class="dropdown-item">Gasto</a>
-							<a href="ingreso.html" class="dropdown-item">Ingreso</a>
-							<a href="transferencia.html" class="dropdown-item">Transferencia</a>
-						</div>
+								<div class="col-12 col-sm-6">
+									<label for="tipo">Tipo de cuenta</label>
+									<input class="form-control" type="text" id="tipo" placeholder="Ahorros" readonly>
+								</div>
+							</div>
 
-					</div>
-					
-				</div>
+							<div class="form-group row">
+								<div class="col-12 col-sm-6 mb-3 mb-sm-0">
+									<label for="icono">Icono</label>
+									<input class="form-control" type="text" id="icono" placeholder="icono" readonly>
+								</div>
+								<div class="col-12 col-sm-6">
+									<label for="gastos">Total de gastos</label>
+									<input class="form-control" type="number" id="gastos" placeholder="$0.0" readonly>
+								</div>
+							</div>
+							
+							<div class="form-group row">
+								<div class="col-12 col-sm-6 mb-3 mb-sm-0">
+									<label for="entidad">Entidad</label>
+									<input class="form-control" type="text" id="entidad" placeholder="BBVA" readonly>
+								</div>
+
+								<div class="col-12 col-sm-6">
+									<label for="ingresos">Total de ingresos</label>
+									<input class="form-control" type="number" id="ingresos" placeholder="$1000" readonly>
+								</div>
+							</div>
+
+							<div class="form-group row">
+								<div class="col-12 col-sm-6 mb-3 mb-sm-0">
+									<label for="notas">Notas</label>
+									<textarea class="form-control descripcion" name="" id="notas" placeholder="Descripción" readonly></textarea>
+								</div>
+								<div class="col-12 col-sm-6">
+									<label for="transf">Total de transferencias</label>
+									<input class="form-control" type="number" id="transf" placeholder="$500" readonly>
+								</div>
+							</div>
+
+							<div class="form-group row">
+								<div class="col-12 col-sm-6 mb-3 mb-sm-0">
+									<label for="inicial">Saldo inicial</label>
+									<input class="form-control" type="number" id="inicial" placeholder="$10000" readonly>
+								</div>
+
+								<div class="col-12 col-sm-6">
+									<label for="actual">Saldo actual</label>
+									<input class="form-control" type="number" id="actual" placeholder="$10500" readonly>
+								</div>
+							</div>
+							
+							<div class="row justify-content-between">
+								<!--************************No se dirige a editar cuenta*******************************-->
+								<div class="col-12 col-sm-4 col-md text-left"> 
+									<button onclick="location.href='editar-cuenta.html'" style="color: #0b7fdb; border-color: #0b7fdb" type="submit" class="btn btn-primary" name="">Editar</button>
+									<button onclick="location.href='administrar-cuentas.html'" style="color: #0b7fdb; border-color: #0b7fdb" type="button" class="btn btn-primary" name="" >Volver</button>
+								</div>
+								
+								
+							</div>
+							
+						</form>
+
 
 
 			</div>
