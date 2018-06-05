@@ -84,33 +84,38 @@
 
 							<div class="form-group row">
 								<div class="col-12 col-sm-6 mb-3 mb-sm-0">
-									<label for="icono">Tipo de transacción</label>
-									<input class="form-control" type="text" id="icono" placeholder="icono" readonly>
+									<label for="tipo">Tipo de transacción</label>
+									<input class="form-control" type="text" id="tipo" placeholder="Gasto" readonly>
 								</div>
 								<div class="col-12 col-sm-6">
-									<label for="gastos">Valor</label>
-									<input class="form-control" type="number" id="gastos" placeholder="$0.0" readonly>
+									<label for="valor">Valor</label>
+									<input class="form-control" type="number" id="valor" placeholder="$0.0" readonly>
 								</div>
 							</div>
 							
 							<div class="form-group row">
 								<div class="col-12 col-sm-6 mb-3 mb-sm-0">
-									<label for="entidad">De:</label>
-									<input class="form-control" type="text" id="entidad" placeholder="BBVA" readonly>
+									<label for="origen">De:</label>
+									<input class="form-control" type="text" id="origen" placeholder="Cuenta x" readonly>
 								</div>
 
 								<div class="col-12 col-sm-6">
-									<label for="ingresos">A:</label>
-									<input class="form-control" type="number" id="ingresos" placeholder="$1000" readonly>
+									<label for="destino">A:</label>
+									<select name="" id="destino" class="form-control">
+										<option value="" disabled selected hidden>Seleccione cuenta de destino</option>
+										<option value="1">Cuenta ficticia</option>
+										<option value="2">Cuenta Z</option>
+									</select>
 								</div>
+
 							</div>
 
 							
 							
 							<div class="row justify-content-between">
 								<div class="col-12 col-sm-4 col-md text-left"> 
-									<button onclick="location.href='editar-cuenta.html'" style="color: #0b7fdb; border-color: #0b7fdb" type="submit" class="btn btn-primary" name="">Aceptar</button>
-									<button onclick="location.href='administrar-cuentas.html'" style="color: #0b7fdb; border-color: #0b7fdb" type="button" class="btn btn-primary" name="" >Cancelar</button>
+									<button onclick="location.href='administrar-transacciones.html'" style="color: #0b7fdb; border-color: #0b7fdb" type="submit" class="btn btn-primary" name="">Aceptar</button>
+									<button onclick="location.href='administrar-transacciones.html'" style="color: #0b7fdb; border-color: #0b7fdb" type="button" class="btn btn-primary" name="" >Cancelar</button>
 								</div>
 								
 								
