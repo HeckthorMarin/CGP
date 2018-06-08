@@ -1,24 +1,82 @@
-<p id="notice"><%= notice %></p>
+<div class="container-fluid">
+	<div class="row" >
 
-<p>
-  <strong>Title:</strong>
-  <%= @account.title %>
-</p>
+   		<%= render 'forms/latizq' %>
 
-<p>
-  <strong>Begbalance:</strong>
-  <%= @account.begBalance %>
-</p>
+		<div class="col-12 col-md-9 offset-md-3 mt-5">
+			<div class="col-12">
+					<p class="h2 text-center text-md-left mt-3 mt-md-0 ml-md-5"><strong>CUENTA FINANCIERA</strong></p>
+			</div>
 
-<p>
-  <strong>Curbalance:</strong>
-  <%= @account.curBalance %>
-</p>
+			<form action="" class="form_inicio_sesion mt-5">
+				<div class="form-group row">
+					<div class="col-12 col-sm-6 mb-3 mb-sm-0">
+						<h6 for="titulo">Título</h6>
+						<p><%= @account.title %></p>
+					</div>
 
-<p>
-  <strong>Note:</strong>
-  <%= @account.note %>
-</p>
+					<div class="col-12 col-sm-6">
+						<h6 for="tipo">Tipo de cuenta</h6>
+						<% t = TypeAccount.where(id = @account.type_account_id) %>
+						<p><%= t[0].name %></p>
+					</div>
+				</div>
 
-<%= link_to 'Edit', edit_account_path(@account) %> |
-<%= link_to 'Back', accounts_path %>
+				<div class="form-group row">
+					<div class="col-12 col-sm-6 mb-3 mb-sm-0">
+						<h6 for="icono"></h6>
+						<p></p>
+					</div>
+					<div class="col-12 col-sm-6">
+						<h6 for="gastos">Total de gastos</h6>
+						<p></p>
+					</div>
+				</div>
+				
+				<div class="form-group row">
+					<div class="col-12 col-sm-6 mb-3 mb-sm-0">
+						<h6 for="entidad">Entidad</h6>
+						<% e = Entity.where(id = @account.entity_id) %>
+						<p><%= e[0].name %></p>
+					</div>
+
+					<div class="col-12 col-sm-6">
+						<h6 for="ingresos">Total de ingresos</h6>
+						<p></p>
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<div class="col-12 col-sm-6 mb-3 mb-sm-0">
+						<h6 for="notas">Notas</h6>
+						<p><%= @account.note %></p>
+					</div>
+					<div class="col-12 col-sm-6">
+						<h6 for="transf">Total de transferencias</h6>
+						<p></p>
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<div class="col-12 col-sm-6 mb-3 mb-sm-0">
+						<h6 for="inicial">Saldo inicial</h6>
+						<p><%= @account.begBalance %></p>
+					</div>
+
+					<div class="col-12 col-sm-6">
+						<h6 for="actual">Saldo actual</h6>
+						<p><%= @account.curBalance = @account.begBalance %></p>
+					</div>
+				</div>
+				
+				<div class="row justify-content-between">
+					<!--************************No se dirige a editar cuenta*******************************-->
+					<div class="col-12 col-sm-4 col-md text-left"> 
+						<button style="color: #0b7fdb; border-color: #0b7fdb" type="submit" class="btn btn-primary" name=""><%= link_to 'Editar', edit_account_path(@account) %></button>
+						<button style="color: #0b7fdb; border-color: #0b7fdb" type="button" class="btn btn-primary" name="" ><%= link_to 'Volver', accounts_path %></button>
+					</div>					
+				</div>			
+			</form>
+		</div>
+	</div>
+</div>

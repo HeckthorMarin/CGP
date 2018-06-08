@@ -1,0 +1,38 @@
+<div class="col-12 d-md-none menu-responsive">
+	<div class="dropdown">
+		<button class="btn btn-menu dropdown-toggle" id="dp-menu" data-toggle="dropdown" >Menu</button>
+		<div class="dropdown-menu" aria-labelledby="dp-menu">
+			<a class="dropdown-item"><%= link_to 'Cuentas', accounts_path %></a>
+			<!-- <a class="dropdown-item">Transacciones</a>
+			<a class="dropdown-item">Presupuesto</a>
+			<a class="dropdown-item">Tarjetas de crédito</a>
+			<a class="dropdown-item">Configuración</a> -->
+			<a class="dropdown-item"><%= link_to 'Cerrar sesión', destroy_user_session_path, method: :delete %></a>
+		</div>
+	</div>
+</div>
+<div class="col-3 d-none d-md-block columna-fija">
+	<div class="row justify-content-center">
+		<div class="col-auto mt-4 pl-0 circulo">
+			<h1 class="titulo-home text-center"><strong>CGP</strong></h1>
+		</div>	
+
+		<div class="w-100"></div>
+		<!--Patrimonio neto-->
+		<div class="col-auto patrim">
+			<!--<p class= "mb-0" style="color: white;"><strong>Patrimonio neto:</strong></p>
+			<p class="form-control-static mb-0 text-center" style="color: white;">$0.0</p>-->
+		</div>
+
+		<div class="col-auto mt-3">
+			<div class="btn-group btn-group-vertical">
+				<button type="button" class="btn btn-link text-left" style="color: white; font-size: 18px;"  ><strong><%= link_to 'Cuentas', accounts_path %></strong></button>
+				<!-- <button type="button" class="btn btn-link text-left" style="color: white; font-size: 18px;"  ><strong>Transacciones</strong></button>
+				<button type="button" class="btn btn-link text-left" style="color: white; font-size: 18px; " ><strong>Presupuesto</strong></button>
+				<button type="button" class="btn btn-link text-left" style="color: white; font-size: 18px;"  ><strong>Tarjetas de crédito</strong></button>
+				<button type="button" class="btn btn-link text-left" style="color: white; font-size: 18px; " ><strong>Configuración</strong></button> -->
+				<button type="button" class="btn btn-link text-left" style="color: white; font-size: 18px;" ><strong><%= link_to "Cerrar sesión", destroy_user_session_path, method: :delete %></strong></button>
+			</div>
+		</div>
+	</div>
+</div>

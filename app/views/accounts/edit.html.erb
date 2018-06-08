@@ -1,6 +1,20 @@
-<h1>Editing Account</h1>
+<div class="container-fluid">
+	<div class="row" >
+   		<%= render 'forms/latizq' %>
+		<div class="col-12 col-md-9 offset-md-3 mt-5">
+			<div class="col-12">
+				<p class="h2 text-center text-md-left mt-3 mt-md-0 ml-md-5"><strong>CUENTA FINANCIERA</strong></p>
+			</div>
+			<%= render 'form', account: @account %>
+			<div class="row justify-content-between">
+				<!--************************No se dirige a editar cuenta*******************************-->
+				<div class="col-12 col-sm-4 col-md text-left form_inicio_sesion"> 
+					<button style="color: #0b7fdb; border-color: #0b7fdb" type="submit" class="btn btn-primary" name=""><%= link_to 'Ver', @account %></button>
+					<button style="color: #0b7fdb; border-color: #0b7fdb" type="button" class="btn btn-primary" name="" ><%= link_to 'Volver', accounts_path %></button>
+				</div>					
+			</div>	
+		</div>
+	</div>
+</div>
 
-<%= render 'form', account: @account %>
 
-<%= link_to 'Show', @account %> |
-<%= link_to 'Back', accounts_path %>
