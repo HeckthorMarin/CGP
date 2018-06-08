@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
 
+  resources :configurations
+  resources :transfers
+  resources :incomes
+  resources :expenses
+  resources :categories
+  resources :transactions
+  resources :budgets
   devise_for :users
 
   authenticated :user do

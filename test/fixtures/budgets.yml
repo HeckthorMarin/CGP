@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  category: MyString
+  begBalance: 1.5
+  curBalance: 1.5
+
+two:
+  category: MyString
+  begBalance: 1.5
+  curBalance: 1.5

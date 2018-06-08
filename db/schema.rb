@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180430045029) do
+ActiveRecord::Schema.define(version: 20180608115440) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,10 +41,42 @@ ActiveRecord::Schema.define(version: 20180430045029) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "budgets", force: :cascade do |t|
+    t.string "category"
+    t.float "begBalance"
+    t.float "curBalance"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "badge_id"
+    t.bigint "category_id"
+    t.index ["badge_id"], name: "index_budgets_on_badge_id"
+    t.index ["category_id"], name: "index_budgets_on_category_id"
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "configurations", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "entities", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "expenses", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "transaction_id"
+    t.bigint "category_id"
+    t.index ["category_id"], name: "index_expenses_on_category_id"
+    t.index ["transaction_id"], name: "index_expenses_on_transaction_id"
   end
 
   create_table "icons", force: :cascade do |t|
@@ -57,6 +89,35 @@ ActiveRecord::Schema.define(version: 20180430045029) do
     t.string "ref_image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "incomes", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "transaction_id"
+    t.index ["transaction_id"], name: "index_incomes_on_transaction_id"
+  end
+
+  create_table "transactions", force: :cascade do |t|
+    t.string "name"
+    t.string "type"
+    t.float "value"
+    t.datetime "date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "badge_id"
+    t.bigint "account_id"
+    t.index ["account_id"], name: "index_transactions_on_account_id"
+    t.index ["badge_id"], name: "index_transactions_on_badge_id"
+  end
+
+  create_table "transfers", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "transaction_id"
+    t.bigint "account_id"
+    t.index ["account_id"], name: "index_transfers_on_account_id"
+    t.index ["transaction_id"], name: "index_transfers_on_transaction_id"
   end
 
   create_table "type_accounts", force: :cascade do |t|
@@ -97,4 +158,13 @@ ActiveRecord::Schema.define(version: 20180430045029) do
   add_foreign_key "accounts", "icons"
   add_foreign_key "accounts", "type_accounts"
   add_foreign_key "accounts", "users"
+  add_foreign_key "budgets", "badges"
+  add_foreign_key "budgets", "categories"
+  add_foreign_key "expenses", "categories"
+  add_foreign_key "expenses", "transactions"
+  add_foreign_key "incomes", "transactions"
+  add_foreign_key "transactions", "accounts"
+  add_foreign_key "transactions", "badges"
+  add_foreign_key "transfers", "accounts"
+  add_foreign_key "transfers", "transactions"
 end

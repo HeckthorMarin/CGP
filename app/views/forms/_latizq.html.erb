@@ -20,8 +20,12 @@
 		<div class="w-100"></div>
 		<!--Patrimonio neto-->
 		<div class="col-auto patrim">
-			<!--<p class= "mb-0" style="color: white;"><strong>Patrimonio neto:</strong></p>
-			<p class="form-control-static mb-0 text-center" style="color: white;">$0.0</p>-->
+			<p class= "mb-0" style="color: white;"><strong>Patrimonio neto:</strong></p>
+			<p class="form-control-static mb-0 text-center" style="color: white;">
+			<% pn = 0 %>
+			<% Account.where(user_id: current_user.id).each{ |a| pn += a.curBalance } %>
+			<%= pn %>
+			</p>
 		</div>
 
 		<div class="col-auto mt-3">

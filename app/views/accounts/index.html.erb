@@ -17,6 +17,7 @@
             <th>OPCIONES</th>
           </thead>
     <!--__________________________________Este es el que se debe repetir para cada cuenta__________________________________-->
+          <% @accounts =  Account.where(user_id: current_user.id) %>
           <% @accounts.each do |account| %>
             <tr> 
               <td><%= account.title %></td>

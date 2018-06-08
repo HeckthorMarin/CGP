@@ -29,8 +29,8 @@ class AccountsController < ApplicationController
     respond_to do |format|
       if @account.save
 
-        @account.update(:curBalance => @account.begBalance)
-        format.html { redirect_to @account, notice: 'Account was successfully created.' }
+        @account.update(:curBalance => @account.begBalance, :user_id => current_user.id)
+        format.html { redirect_to @account, notice: 'La cuenta fue creada satisfactoriamente.' }
         format.json { render :show, status: :created, location: @account }
       else
         format.html { render :new }
@@ -44,7 +44,8 @@ class AccountsController < ApplicationController
   def update
     respond_to do |format|
       if @account.update(account_params)
-        format.html { redirect_to @account, notice: 'Account was successfully updated.' }
+        @account.update(:curBalance => @account.begBalance)
+        format.html { redirect_to @account, notice: 'La cuenta fue editada satisfactoriamente.' }
         format.json { render :show, status: :ok, location: @account }
       else
         format.html { render :edit }
@@ -58,7 +59,7 @@ class AccountsController < ApplicationController
   def destroy
     @account.destroy
     respond_to do |format|
-      format.html { redirect_to accounts_url, notice: 'Account was successfully destroyed.' }
+      format.html { redirect_to accounts_url, notice: 'La cuenta fue eliminada satisfactoriamente.' }
       format.json { head :no_content }
     end
   end
@@ -71,6 +72,6 @@ class AccountsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def account_params
-      params.require(:account).permit(:title, :begBalance, :curBalance, :note)
+      params.require(:account).permit(:title, :begBalance, :curBalance, :note, :badge_id, :type_account_id, :entity_id)
     end
 end

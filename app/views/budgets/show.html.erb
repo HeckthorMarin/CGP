@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @budget.category %>
+</p>
+
+<p>
+  <strong>Begbalance:</strong>
+  <%= @budget.begBalance %>
+</p>
+
+<p>
+  <strong>Curbalance:</strong>
+  <%= @budget.curBalance %>
+</p>
+
+<%= link_to 'Edit', edit_budget_path(@budget) %> |
+<%= link_to 'Back', budgets_path %>
