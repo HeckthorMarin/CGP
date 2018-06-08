@@ -34,6 +34,8 @@ gem 'devise', git: 'https://github.com/plataformatec/devise.git'
 
 gem 'tether-rails'
 
+#gem 'activeadmin_addons', git: 'https://github.com/platanus/activeadmin_addons.git'
+gem 'glyphicons-rails', '~> 0.1.2'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

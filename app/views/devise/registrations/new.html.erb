@@ -74,21 +74,21 @@
             </div>
             
             <div class="form-group row">
-              <!--
-              <div class="col-12">
+              
+              <!--<div class="col-12">
                 <h6>Pregunta de seguridad #1</h6>
               </div>
-              -->
+              
               <div class="col-12 col-sm-6 mb-3 mb-sm-0">
-                <!--
+                <% opciones = ['¿Recuerdas el nombre de algun maestro?','¿Comida favorita?','¿Ciudad de nacimiento de tus padres?'] %>
+                
                 <select name="" id="op" class="custom-select">
                   <option value="" disabled selected hidden>Selecciona una opción *</option>
-                  <option value="1">¿Recuerdas el nombre de algun maestro?</option>
-                  <option value="2">¿Comida favorita?</option>
-                  <option value="3">¿Ciudad de nacimiento de tus padres?</option>
+                  <option value="1"></option>
+                  <option value="2"></option>
+                  <option value="3"></option>
                 </select>
-                -->
-                <%= f.text_field :sq1, :required => true, class:"form-control", type:"text", placeholder:"Pregunta #1 *" %>
+                <%= f.select :sq1, opciones, class:"form-control", :required => true %>
               </div>
 
               <div class="col-12 col-sm-6">
@@ -97,27 +97,27 @@
             </div>
 
             <div class="form-group row">
-              <!--
+              
               <div class="col-12">
                 <h6>Pregunta de seguridad #2</h6>
               </div>
-              -->
+              
               <div class="col-12 col-sm-6 mb-3 mb-sm-0">
-                <!--
+                 <% opciones = ['¿Como era tu apodo de niño?','¿Como se llamaba tu primera mascota?','¿Cual es tu color preferido?'] %>
+                
                 <select name="" id="" class="custom-select">
                   <option value="" disabled selected hidden>Selecciona una opción *</option>
-                  <option value="1">¿Como era tu apodo de niño?</option>
-                  <option value="2">¿Como se llamaba tu primera mascota?</option>
-                  <option value="3">¿Cual es tu color preferido?</option>
+                  <option value="1"></option>
+                  <option value="2"></option>
+                  <option value="3"></option>
                 </select>
-                -->
-                <%= f.text_field :sq1, :required => true, class:"form-control", type:"text", placeholder:"Pregunta #2 *" %>
+                <%= f.select :sq2, opciones, :required => true, class:"form-control" %>
               </div>
 
               <div class="col-12 col-sm-6">
-                <%= f.text_field :sa1, :required => true, class:"form-control", type:"text", placeholder:"Respuesta #2 *" %>
+                <%= f.text_field :sa2, :required => true, class:"form-control", type:"text", placeholder:"Respuesta #2 *" %>
               </div>
-            </div>
+            </div> -->
             
             <div class="row justify-content-between">
               <div class="col-12 col-sm-4 col-md text-left action">
